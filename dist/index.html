@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="relative flex h-screen w-screen items-center justify-center bg-indigo-950">
+        <div class="absolute grid h-5/6 w-4/6 gap-3 flex-wrap rounded-lg bg-white p-5 sm:grid-cols-2">
+            <div class="rounded-lg pl-7 border-black bg-white font-serif">
+                <h1 class="my-4 block text-3xl font-bold">Welome to notesify!</h1>
+                <p class="my-4 block text-2xl">Create Text and Audio at ease</p>
+
+                <div class="flex flex-col gap-2 text-xs">
+                    <div class="flex bg-white">
+                        <div class="tick mr-2">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                <defs>
+                                    <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#FF6A3A" />
+                                        <stop offset="100%" stop-color="#FF527B" />
+                                    </linearGradient>
+                                </defs>
+                                <g fill="none">
+                                    <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                                    <path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285" />
+                                </g>
+                            </svg>
+                        </div>
+                        <span>Play with your converted text</span>
+                    </div>
+                    <div class="flex bg-white">
+                        <div class="tick mr-2">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                <defs>
+                                    <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#FF6A3A" />
+                                        <stop offset="100%" stop-color="#FF527B" />
+                                    </linearGradient>
+                                </defs>
+                                <g fill="none">
+                                    <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                                    <path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285" />
+                                </g>
+                            </svg>
+                        </div>
+                        <span>Download the pdf file for converted text</span>
+                    </div>
+                    <div class="flex bg-white">
+                        <div class="tick mr-2">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                <defs>
+                                    <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#FF6A3A" />
+                                        <stop offset="100%" stop-color="#FF527B" />
+                                    </linearGradient>
+                                </defs>
+                                <g fill="none">
+                                    <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                                    <path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285" />
+                                </g>
+                            </svg>
+                        </div>
+                        <span>And much more!</span>
+                    </div>
+                </div>
+                <form class="mt-6" id="Converter" enctype="multipart/form-data">
+                    <div class="mb-3 block font-serif text-2xl font-bold">Upload your file</div>
+                    <div class="flex">
+                        <div>
+                            <select class="rounded-lg bg-black p-2 text-white" name="apiSelector" id="apiSelector">
+                                <option value="" selected disabled>Choose your converter</option>
+                                <option value="transcription">Audio Transcription</option>
+                                <option value="translation">Audio Translation</option>
+                                <option value="speechGeneration">Speech Genration</option>
+                                <option value="audioTranslation">Audio Translation</option>
+                            </select>
+                        </div>
+                        <div class="pl-5" id="fileUpload">
+                            <label for="text"
+                                class="block cursor-pointer rounded-md border border-gray-300 bg-white p-2 hover:bg-gray-100">
+                                <span>Upload file</span>
+                                <input class="hidden" type="file" name="file" id="text" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <p class="block pt-8 text-sm text-purple-900"><i>Need instant audio recording?</i></p>
+                    <div id="recorder" class="flex">
+                        <button class="mt-2 rounded-md bg-purple-600 px-2 py-1 text-white">Start Recording</button>
+                        <p id="timer" class="text-xl py-2 px-3">0:00</p>
+                    </div>
+                    <button type="submit"
+                        class="block border-black border-2 text-white bg-orange-600 mt-7 text-xl px-6 py-2 rounded-lg"
+                        id="convertButton">Convert</button>
+                </form>
+            </div>
+            <div class="rounded-lg border-2 border-black bg-purple-400"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
