@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="flex h-screen flex-col">
+    <ul class="flex w-screen justify-center bg-gray-900">
+      <li class="p-7 pt-10 text-white hover:bg-slate-800">Home</li>
+      <li class="p-7 pt-10 text-white hover:bg-slate-800">Products</li>
+      <li class="p-7 pt-10 text-white hover:bg-slate-800">About</li>
+      <li class="p-7 pt-10 text-white hover:bg-slate-800">Contact</li>
+    </ul>
+
+    <div class="flex h-5/6 w-screen items-center justify-center gap-1.5 bg-slate-800">
+      <form class="w-">
+        <div class="flex flex-col">
+          <div class="flex gap-3">
+            <div>
+              <label for="name" class="mb-1 block text-gray-50">First name</label>
+              <input type="name" placeholder="John" class="mb-5 h-7 rounded-lg bg-slate-600 py-5 pl-2 text-slate-200" />
+            </div>
+            <div>
+              <label for="name" class="mb-1 block text-gray-50"> Last name</label>
+              <input type="name" placeholder="Pal" class="mb-5 h-7 rounded-lg bg-slate-600 py-5 pl-2 text-slate-200" />
+            </div>
+          </div>
+          <label for="name" class="mb-1 text-gray-50"> Username</label>
+          <input type="name" placeholder="johnpal" class="mb-5 h-7 rounded-lg bg-slate-600 py-5 pl-2 text-slate-200" />
+          <label for="email" class="mb-1 text-gray-50"> Email</label>
+          <input type="email" placeholder="name@gmail.com"
+            class="mb-5 h-7 rounded-lg bg-slate-600 py-5 pl-2 text-slate-200" />
+          <label for="email" class="mb-1 text-gray-50"> Password</label>
+          <input type="email" placeholder="password"
+            class="mb-5 h-7 rounded-lg bg-slate-600 py-5 pl-2 text-slate-200" />
+
+          <label for="role" class="mb-1 text-gray-50">Select your role</label>
+          <select id="roles"
+            class="mb-5 w-full rounded-lg border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500">
+            <option selected>Choose your role</option>
+            <option value="customer">Customer</option>
+            <option value="employee">Employee</option>
+            <option value="manager">Manager</option>
+          </select>
+          <button type="submit"
+            class="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-gray-50 hover:bg-blue-800 sm:w-32">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex w-screen pt-2 text-white last:bg-slate-950">
+      <div class="flex w-96 flex-col pl-6">
+        <span>OpenAI © 2015–2024</span>
+        <a href="https://openai.com/policies" class="hover:underline">
+          <span>Terms & poilicies</span>
+        </a>
+        <a href="https://openai.com/policies/privacy-policy" class="hover:underline">
+          <span>Privacy & policy</span>
+        </a>
+        <a href="https://openai.com/brand" class="hover:underline">
+          <span>Brand poilicies</span>
+        </a>
+      </div>
+      <div>
+        <ul class="flex pl-16">
+          <li class="mr-6">Github</li>
+          <li class="mr-6">LinkedIn</li>
+          <li class="mr-6">YouTube</li>
+          <li class="mr-6">Twitter</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

@@ -13,7 +13,7 @@
         <div class="absolute grid h-5/6 w-4/6 gap-3 flex-wrap rounded-lg bg-white p-5 sm:grid-cols-2">
             <div class="rounded-lg pl-7 border-black bg-white font-serif">
                 <h1 class="my-4 block text-4xl font-bold">Welome to notesify!</h1>
-                <p class="my-4 block text-2xl">Create Text and Audio at ease</p>
+                <p class="my-4 block text-2xl">Create Text and Audio Notes at ease</p>
 
                 <div class="flex flex-col gap-2 text-xs">
                     <div class="flex bg-white">
@@ -31,7 +31,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <span>Play with your converted text</span>
+                        <span>Choose your converter.</span>
                     </div>
                     <div class="flex bg-white">
                         <div class="tick mr-2">
@@ -48,7 +48,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <span>Download the pdf file for converted text</span>
+                        <span>Upload your file.</span>
                     </div>
                     <div class="flex bg-white">
                         <div class="tick mr-2">
@@ -65,12 +65,12 @@
                                 </g>
                             </svg>
                         </div>
-                        <span>And much more!</span>
+                        <span>And just click convert. That's it!</span>
                     </div>
                 </div>
                 <form class="mt-6" id="Converter" enctype="multipart/form-data">
                     <div class="mb-3 block font-serif text-2xl font-bold">Upload your file</div>
-                    <div class="flex">
+                    <div class="flex ">
                         <div>
                             <select class="rounded-lg bg-black p-2 text-white" name="apiSelector" id="apiSelector">
                                 <option value="" selected disabled>Choose your converter</option>
@@ -80,13 +80,10 @@
                                 <option value="audioTranslation">Audio Translation</option>
                             </select>
                         </div>
-                        <div class="pl-5" id="fileUpload">
-                            <label for="text"
-                                class="block cursor-pointer rounded-md border border-gray-300 bg-white p-2 hover:bg-gray-100">
-                                <span>Upload file</span>
-                                <input class="hidden" type="file" name="file" id="text" />
-                            </label>
-                        </div>
+
+
+                        <label for="text">Choose a file:</label>
+                        <input type="file" id="text" name="text">
                     </div>
 
                     <p class="block pt-8 text-sm text-purple-900"><i>Need instant audio recording?</i></p>
@@ -102,6 +99,27 @@
             <div class="rounded-lg border-2 border-black bg-purple-400"></div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select the file input element
+            const fileInput = document.getElementById('text');
+
+            // Add an event listener to detect when a file is selected
+            fileInput.addEventListener('change', handleFileUpload);
+
+            // Function to handle file upload
+            function handleFileUpload(event) {
+                const file = event.target.files[0]; // Get the selected file
+
+                // Do something with the file, such as displaying its name
+                console.log('Selected file:', file.name);
+                console.log('File type:', file.type);
+                console.log('File size:', file.size, 'bytes');
+                console.log('Last modified:', new Date(file.lastModified));
+                // You can also upload the file to your server using AJAX or fetch
+            }
+        });
+    </script>
 
 </body>
 
